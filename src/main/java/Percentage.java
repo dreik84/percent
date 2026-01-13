@@ -16,6 +16,10 @@ public class Percentage {
         return part / percent * 100;
     }
 
+    public static double getOriginalFromPartWithDiff(double part, double diff) {
+        return part * 100 / (100 + diff);
+    }
+
     public static double getPercentOfPercent(double percent1, double percent2) {
         return (percent1 / 100) * (percent2 / 100) * 100;
     }
