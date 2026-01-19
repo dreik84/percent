@@ -6,5 +6,6 @@ public class Main {
         System.out.println(Percentage.getOriginalFromPart(20, 50));
         System.out.println(Percentage.getOriginalFromPartWithDiff(100, -10));
         System.out.println(Percentage.getPercentOfPercent(50, 40));
+        System.out.println(Percentage.getSimpleBankPercent(100_000, 5, 2));
     }
 }

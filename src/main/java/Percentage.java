@@ -23,4 +23,10 @@ public class Percentage {
     public static double getPercentOfPercent(double percent1, double percent2) {
         return (percent1 / 100) * (percent2 / 100) * 100;
     }
+
+    public static double getSimpleBankPercent(double sum, double rate, double period) {
+        int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
+        return sum * (1 + (period * rate) / (periodType * 100));
+//        return sum * (1 + (period / periodType) * (rate / 100));
+    }
 }
