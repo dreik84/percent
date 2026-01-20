@@ -27,6 +27,12 @@ public class Percentage {
     public static double getSimpleBankPercent(double sum, double rate, double period) {
         int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
         return sum * (1 + (period * rate) / (periodType * 100));
+//        return sum + sum * (rate / 100) * (period / periodType);
 //        return sum * (1 + (period / periodType) * (rate / 100));
+    }
+
+    public static double getBankPercentWithCapitalization(double sum, double rate, double period) {
+        int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
+        return sum * Math.pow(1 + rate / 100 * periodType, period);
     }
 }
