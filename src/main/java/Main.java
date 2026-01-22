@@ -8,5 +8,6 @@ public class Main {
         System.out.println(Percentage.getPercentOfPercent(50, 40));
         System.out.println(Percentage.getSimpleBankPercent(100_000, 5, 2));
         System.out.println(Percentage.getBankPercentWithCapitalization(100_000, 5, 2));
+        System.out.println(Percentage.getBankPercentAnnuityPayment(100_000, 18, 5));
     }
 }

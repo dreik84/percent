@@ -24,6 +24,14 @@ public class Percentage {
         return (percent1 / 100) * (percent2 / 100) * 100;
     }
 
+    /**
+     * Простой процент
+     *
+     * @param sum    - сумма кредита
+     * @param rate   - процентная ставка
+     * @param period - количество лет, месяцев или дней
+     * @return конечная сумма по истечении срока
+     */
     public static double getSimpleBankPercent(double sum, double rate, double period) {
         int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
         return sum * (1 + (period * rate) / (periodType * 100));
@@ -31,8 +39,30 @@ public class Percentage {
 //        return sum * (1 + (period / periodType) * (rate / 100));
     }
 
+    /**
+     * Сложный процент с капитализацией
+     *
+     * @param sum    - сумма кредита
+     * @param rate   - процентная ставка
+     * @param period - количество лет, месяцев или дней
+     * @return конечная сумма по истечении срока
+     */
     public static double getBankPercentWithCapitalization(double sum, double rate, double period) {
         int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
         return sum * Math.pow(1 + rate / 100 * periodType, period);
+    }
+
+    /**
+     * Аннуитетный платёж
+     *
+     * @param sum    - сумма кредита
+     * @param rate   - процентная ставка
+     * @param period - количество месяцев
+     * @return сумма ежемесячной выплаты
+     */
+    public static double getBankPercentAnnuityPayment(double sum, double rate, double period) {
+        int periodType = 12; // years - 1, months - 12, weeks - 52, days - 365 (366)
+        double k = rate / (100 * periodType); // доля ежемесячной процентной ставки
+        return sum * (k + k / (Math.pow(k + 1, period) - 1));
     }
 }
