@@ -49,7 +49,7 @@ public class Percentage {
      */
     public static double getBankPercentWithCapitalization(double sum, double rate, double period) {
         int periodType = 1; // years - 1, months - 12, weeks - 52, days - 365 (366)
-        return sum * Math.pow(1 + rate / 100 * periodType, period);
+        return sum * Math.pow(1 + rate / (100 * periodType), period);
     }
 
     /**
