@@ -10,7 +10,8 @@ public class Main {
         System.out.println(Percentage.getBankPercentWithCapitalization(100_000, 5, 2));
         System.out.println(Percentage.getBankPercentAnnuityPayment(100_000, 18, 5));
 
-        Ratio.printRatio(3, 4);
+        Ratio.printRatio(3, 4, 5, 6);
         System.out.println(Ratio.getPercentageRatio(3, 4));
+        System.out.println(Ratio.getUnknownByRatio(3, 4, 6));
     }
 }
