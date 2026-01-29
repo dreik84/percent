@@ -19,4 +19,12 @@ public class Ratio {
     public static double getUnknownByRatio(double a, double b, double part) {
         return part / a * b;
     }
+
+    public static void divideNumInRatio(double a, double b, double num) {
+        double sum = a + b;
+        double num1 = num * a / sum;
+        double num2 = num * b / sum;
+
+        System.out.println(num1 + " " + num2);
+    }
 }
