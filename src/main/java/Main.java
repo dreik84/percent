@@ -14,5 +14,10 @@ public class Main {
         System.out.println(Ratio.getPercentageRatio(3, 4));
         System.out.println(Ratio.getUnknownByRatio(3, 4, 6));
         Ratio.divideNumInRatio(2, 3, 11);
+
+        Ratio ratio1 = new Ratio(3, 4);
+        Ratio ratio2 = new Ratio(6, 8);
+        Proportion proportion = new Proportion(ratio1, ratio2);
+        System.out.println(proportion);
     }
 }
