@@ -1,6 +1,20 @@
+import lombok.Getter;
+import lombok.ToString;
+
 import java.util.StringJoiner;
 
+@Getter
+@ToString
 public class Ratio {
+
+    private final double a;
+    private final double b;
+
+    public Ratio(double a, double b) {
+        if (b == 0) throw new IllegalArgumentException("The denominator cannot be zero");
+        this.a = a;
+        this.b = b;
+    }
 
     public static void printRatio(int... nums) {
         StringJoiner sj = new StringJoiner(" : ");
