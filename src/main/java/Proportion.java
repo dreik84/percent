@@ -14,6 +14,17 @@ public class Proportion {
     }
 
     public static boolean check(Ratio ratio1, Ratio ratio2) {
-        return ratio1.getA() / ratio1.getB() == ratio2.getA() / ratio2.getB();
+        return ratio1.getA() * ratio2.getB() == ratio2.getA() * ratio1.getB(); // the main property
+//        return ratio1.getA() / ratio1.getB() == ratio2.getA() / ratio2.getB();
+    }
+
+    // a / b == c / d
+    public static double getUnknownExtremeMember(Ratio ratio, double c) {
+        return ratio.getB() * c / ratio.getA();
+    }
+
+    // a / b == c / d
+    public static double getUnknownAverageMember(Ratio ratio, double d) {
+        return ratio.getA() * d / ratio.getB();
     }
 }

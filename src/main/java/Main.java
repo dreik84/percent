@@ -19,5 +19,7 @@ public class Main {
         Ratio ratio2 = new Ratio(6, 8);
         Proportion proportion = new Proportion(ratio1, ratio2);
         System.out.println(proportion);
+        System.out.println(Proportion.getUnknownExtremeMember(ratio1, 6));
+        System.out.println(Proportion.getUnknownAverageMember(ratio1, 8));
     }
 }
