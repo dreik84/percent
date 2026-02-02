@@ -27,4 +27,11 @@ public class Proportion {
     public static double getUnknownAverageMember(Ratio ratio, double d) {
         return ratio.getA() * d / ratio.getB();
     }
+
+    public static Proportion makeHarmonicProportion(double a, double b) {
+        Ratio ratio1 = new Ratio(a, b);
+        Ratio ratio2 = new Ratio(b, a - b);
+
+        return new Proportion(ratio1, ratio2);
+    }
 }
