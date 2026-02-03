@@ -28,9 +28,12 @@ public class Proportion {
         return ratio.getA() * d / ratio.getB();
     }
 
+    // golden ratio
     public static Proportion makeHarmonicProportion(double a, double b) {
         Ratio ratio1 = new Ratio(a, b);
         Ratio ratio2 = new Ratio(b, a - b);
+//        Ratio ratio2 = new Ratio(a + b, a);
+//        double gr = (1 + Math.sqrt(5)) / 2;
 
         return new Proportion(ratio1, ratio2);
     }
