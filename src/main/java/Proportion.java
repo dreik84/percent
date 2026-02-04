@@ -14,7 +14,7 @@ public class Proportion {
     }
 
     public static boolean check(Ratio ratio1, Ratio ratio2) {
-        return ratio1.getA() * ratio2.getB() == ratio2.getA() * ratio1.getB(); // the main property
+        return ratio1.getA() * ratio2.getB() == ratio2.getA() * ratio1.getB(); // the main property of U+221D
 //        return ratio1.getA() / ratio1.getB() == ratio2.getA() / ratio2.getB();
     }
 
